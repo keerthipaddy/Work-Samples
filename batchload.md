@@ -9,8 +9,6 @@ View the GitHub project [here](https://github.com/Nuix/Batch-Load-Report) or dow
 
 # Overview
 
-**Written By:** Keerthi
-
 Generates a report with information about Nuix batch loads.  Report includes:
 
 - Relevant Evidence 

@@ -201,7 +201,7 @@ This release includes resolutions for the following previously known issues:
 - Switch for Spanish language translation is changed due to an ABBYY issue. Users need to use the following switch:
 
 `-Duser.language=es -Duser.country=MX`
-Note: The -Duser.language=es -Duser.country=419 is no longer supported and is replaced with the above switch. 
+> Note: The -Duser.language=es -Duser.country=419 is no longer supported and is replaced with the above switch. 
 
 ## Known Issues
 The following known issues are found in this release.  

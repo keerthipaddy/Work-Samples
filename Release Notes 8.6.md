@@ -70,8 +70,8 @@ Notable Documentation Updates
 ## Notable Documentation Updates
 The following documentation updates are available with this release:
 
-- Deep Learning Image Classification Feature Guide: The Deep Learning Image Classification feature enables you to configure and label images to your required data structure. This guide assists you with the workflow, including the required configuration and training the model in Workstation.
-- Named Entities Extraction Feature Guide: The Named Entities Extraction feature identifies specific data sets and is useful for analysis as it enables information such as companies, personal IDs, names, or phone numbers to be brought to the surface of the data set. This guide assists you with the workflow for Named Entities Extraction, processing settings, creating Custom Named Entities, and Named Entity Profiles.
+- *Deep Learning Image Classification Feature Guide*: The Deep Learning Image Classification feature enables you to configure and label images to your required data structure. This guide assists you with the workflow, including the required configuration and training the model in Workstation.
+- *Named Entities Extraction Feature Guide*: The Named Entities Extraction feature identifies specific data sets and is useful for analysis as it enables information such as companies, personal IDs, names, or phone numbers to be brought to the surface of the data set. This guide assists you with the workflow for Named Entities Extraction, processing settings, creating Custom Named Entities, and Named Entity Profiles.
 
 ## Resolved Issues
 This release includes resolutions for the following previously known issues:   

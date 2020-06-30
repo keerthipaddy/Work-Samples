@@ -29,3 +29,26 @@ Users can search relevant documents easily by viewing all XRY logs in a single d
 * Enable Process Text in the Default processing profile.
 * Enable Process Text in the Default_Mobile processing profile. 
 * Non-English characters in the XRY log file appear with a question mark ?. 
+
+## Licence Updates for Custom Named Entities and Social Media Extraction
+Improved licensing for Social Media Extraction and Custom Named Entities, thus extracting more intelligence. 
+
+Note: Extracting data from named entities and social media is now made available to all users with a Case_Creation license feature. Users with a Case_Creation license feature do not need any specific plus feature to use these functionalities. 
+
+### Custom Named Entities 
+Custom Named Entities is now available to users with a Case_Creation license using Workstation. Note: Nuix Data Finder (NDF) plugin requires the SENSITIVE_DATA_FINDER plus feature enabled.  
+
+Users can access the Custom Named Entities feature from: 
+
+* Global Options, then Custom Named Entities
+* Global Options, then Named Entity Profiles
+* Data Processing Settings, then Use custom named entity profile
+
+### Social Media Extraction
+Social media can be extracted by users with a Workstation Case_Creation licence feature, where users will be able to process social media data for Facebook, WhatsApp, and Line Chat, without any restrictions.
+
+Note: This licence feature change does not include Twitter. Extracting data from Twitter (network data) requires the NETWORK_DATA license feature with the plus feature enabled.
+Refer to Adding Real Time Evidence in the Workstation User Guide for more information. 
+The licencing portal is updated with the following licence modification for social media formats, Extraction of social media formats- Facebook, WhatsApp (available by default from v8.6). 
+
+

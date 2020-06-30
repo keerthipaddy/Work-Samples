@@ -1,6 +1,6 @@
 ---
 layout: defaut
-title: home
+title: Home
 ---
 
 # Release Notes

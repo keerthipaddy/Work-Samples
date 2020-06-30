@@ -1,8 +1,3 @@
----
-layout: defaut
-title: Home
----
-
 # Release Notes
 Nuix Workstation 8.6 release contains upgrades, enhancements, resolved issues, and some new features. This document provides the highlights of this release.
 

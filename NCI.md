@@ -39,7 +39,7 @@ Select the type of remediation to perform on files responsive to the Scope query
 
 | Setting | Description | Attribute Settings | File Ownership Settings | Copy Settings | Compression/Encryption Settings | Destruction Settings |
 | ------- | ----------- | :----------------: | :---------------------: | :-----------: | :-----------------------------: | :------------------: |
-| **Delete Files** | Deletes files | N | N | N | N | Y |
+| **Delete Files**   | Deletes files | N | N | N | N | Y |
 | **Move Files** | Relocates files to Copy Destination Directory | Y | Y | Y | Y | Y |
 | **In Place** | Updates files in place | Y | Y | N | Y | N |
 | **Copy** | Copies files to Copy Destination Directory | Y | Y | Y | Y | N |

@@ -3,7 +3,6 @@ layout: defaut
 title: home
 ---
 
-Alt-H1
 ====== 
 # Release Notes
 

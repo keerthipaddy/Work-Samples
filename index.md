@@ -27,7 +27,7 @@ Users are able to view the content (via Native viewer) of any supported report f
 Users can search relevant documents easily by viewing all XRY logs in a single document instead of one document per log entry. An XRY Log document is added to include all the logs, one line per log entry. The following enhancements have been made:
 
 #### Detect XRY logs as a new MIME type (under MIME types > Logs).
-..*XRY logs can be searched using the new MIME type.
-..*Enable Process Text in the Default processing profile.
-..*Enable Process Text in the Default_Mobile processing profile. 
-..*Non-English characters in the XRY log file appear with a question mark ?. 
+*XRY logs can be searched using the new MIME type.
+*Enable Process Text in the Default processing profile.
+*Enable Process Text in the Default_Mobile processing profile. 
+*Non-English characters in the XRY log file appear with a question mark ?. 

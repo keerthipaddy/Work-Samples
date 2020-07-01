@@ -38,6 +38,8 @@ Named Entity Profiles can be added directly as a Data Processing Setting from th
 # Mime Type Settings
 The Mime Type Settings tab lists the file types and file categories that Workstation processes. Mime type settings allow selecting the file types that users would like named entities extracted across. Further flexibility of the named entity framework allows users to specify not only where entities should be identified, but also the file types from which they should be extracted. This is controlled by selecting the Entities column on the MIME Type Settings tab of the Evidence Processing Settings to select or deselect categories or even specific types of files for which users would like named entity recognition to be processed.
 
+![Mime Type Settings](https://github.com/keerthipaddy/worksamples/blob/master/images/Named%20Entiies_Mime%20Types.png)
+
 This feature allows a user, as an investigator, to specifically target individual (or groups of) files, with the chosen entity options, ensuring to get to the key data even faster.
 
 > Tip: If your primary interest is in the IP addresses that contain system files or unsupported files, you can deselect every other MIME type and further improve your investigation speeds. In the event you decide you need to extract entities from more file types, you can do so by reloading items from source data and changing the MIME type settings accordingly.

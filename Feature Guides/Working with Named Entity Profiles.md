@@ -183,6 +183,7 @@ The Create Named Entity Profile window appears.
 6. Click OK to proceed.  
 
 > Note: 
+>
 - While selecting the scope for Named Entity Profiles: 
 - A User scope Named Entity Profile should have User scope and Local computer scope Custom Named Entities to select from.
 - A Case scope Named Entity Profile should have Case, User, Local computer scope Custom Named Entities to select from.
@@ -198,3 +199,4 @@ The Create Named Entity Profile window appears.
 - Custom Named Entities will only be processed if they are added in a Named Entity Profile that is being used.
 - If a Custom Named Entity is deleted within a profile, then all processing jobs using that profile will fail. In this case, the profile must be updated. 
 - When you update the profile in Edit mode from Global options, the Entities in Profile list is automatically updated and the deleted Custom Named Entity is removed. Click OK. This ensures the profile can be used.
+>

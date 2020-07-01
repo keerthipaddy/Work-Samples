@@ -119,6 +119,7 @@ Some available patterns:
 ## Examples
 
 | Query Syntax | Description | 
+|---------------|-------------|
 | /apple|orange/ | Matches all items that contain either apple or orange. |
 | /eat|ate apple|orange/ ~2 | Matches all items that contain either eat or ate and then apple or orange, with up to two unrelated terms separating them. Note that only whole words are matched. To match partial words, use wildcard characters. |
 | /gr[eao]y/ | Matches all items that contain either grey, gray, or groy. |

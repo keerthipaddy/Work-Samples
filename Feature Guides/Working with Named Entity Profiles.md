@@ -68,4 +68,19 @@ To search within this list, instead of reverting to searching within the entire 
 
 For example, after double-clicking on the company entity *Company XYZ*, the search bar has the following query: *named-entities:"company;Company XYZ"*. If you want to search for all PDFs within *Company XYZ*, change the query to look like: *named-entities:"company;Company XYZ" AND mime-type: application/pdf*
 
+# Named Entity Wordlists (.lists)
+Named Entity wordlists require a UTF-8 encoded word list file with an extension of .list. The wordlists are stored in *C:\Program Files\Nuix\Nuix Application version\user-data\Named Entities\lists*. A hash character indicates a comment and can be used to specify how the search should operate. By default, it is case sensitive and not based on whole words.
+
+Searches are case sensitive and will locate the word anywhere in the file. For example, searching for the word plan will result in hits where the word planning is found, but not if the word Plan is found.  
+
+| Defaults Values that can be altered |  |
+|-----------|----------| 
+|#caseInsensitive |	The case need not match, capitalization is ignored.|
+|#wholeWords | Match only the whole word.|
+|#wholeWordsWhiteSpace | Will match whole words with white space (space, tab, new-line) between them, but not with characters (comma, periods, etc.) between them. For example, #wholeWordsWhiteSpace included in a file searching for Nuix eDiscovery will find Nuix eDiscovery, but not Nuix. eDiscovery.
+
+## Viewing Wordlists in Workstation
+The wordlists are processed and added in the Words view in the view pane.
+
+
 

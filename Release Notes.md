@@ -134,7 +134,7 @@ This release includes resolutions for the following previously known issues:
 - Updated the Cellebrite health activity records to also contain metadata such as distance and step count.
 - Improved processing of XRY data to remove Unhandled child: tags warnings.
 - Fixed an issue where XRY calls marked as busy or no answer were not decoded correctly.
-- Added a switch -Dnuix.data.exchangews.skipLegacyIdShortening=true to skip legacy EWS ID shortening, which triggers slow large folder scan and resulted in EWS connection timeout.
+- Added a switch `-Dnuix.data.exchangews.skipLegacyIdShortening=true` to skip legacy EWS ID shortening, which triggers slow large folder scan and resulted in EWS connection timeout.
 - Added support for extracting RAR5 archives.
 - The Amazon S3 **Last-Modified** property now maps to the standard Nuix property **File Modified**.
 - Blocked external resources in PowerPoint and Word documents from being downloaded during extraction and Imaging.
@@ -160,33 +160,33 @@ This release includes resolutions for the following previously known issues:
 - Legal export now pauses in response to low disk space events.
 
 ### Scripting
-- Added *usingText* to *Item.Text*. It can be used in place of the *getReader* method, which can throw `UnsupportedOperationException`.
-- Fixed Processor#process() so that the profile optionally nominated in Processor#setProcessingProfile(String) is honored.
+- Added `usingText` to `Item.Text`. It can be used in place of the `getReader` method, which can throw `UnsupportedOperationException`.
+- Fixed `Processor#process()` so that the profile optionally nominated in `Processor#setProcessingProfile(String)` is honored.
 - Fixed a few potential null-pointer exceptions in CredentialsStore.
-- Fixed an issue with Custodian#setName() that was causing illegal state exceptions.
-- Fixed an issue causing a null-pointer exception in ProductionSet#setProductionProfileObject().
+- Fixed an issue with `Custodian#setName()` that was causing illegal state exceptions.
+- Fixed an issue causing a null-pointer exception in `ProductionSet#setProductionProfileObject()`.
 - Fixed an issue where some flags were not updated after a call to `Item#modify` in the case where the text was not also updated.
-- Fixed an issue where abnormally terminated workers did not restart when the "enableCustomProcessing" option was used with Processor#setProcessingSettings().
-- Fixed CompoundCase#addChildCase(Case) so that a DuplicateCaseException is always thrown when adding a duplicate case to a compound case.
+- Fixed an issue where abnormally terminated workers did not restart when the **enableCustomProcessing** option was used with `Processor#setProcessingSettings()`.
+- Fixed `CompoundCase#addChildCase(Case)` so that a DuplicateCaseException is always thrown when adding a duplicate case to a compound case.
 - Updated documentation for DatabaseParameters and DatabaseParametersBuilder.
-- Added Item#getPhotoDNARobustHash() to retrieve an item's PhotoDNA robust hash value, if it has been computed.
-- Fixed an issue causing Item#getHighlights(String, Set) to return incorrect offsets when using Windows CRLF line endings.
+- Added `Item#getPhotoDNARobustHash()` to retrieve an item's PhotoDNA robust hash value, if it has been computed.
+- Fixed an issue causing `Item#getHighlights(String, Set)` to return incorrect offsets when using Windows CRLF line endings.
 - Fixed an issue where Python in scripted metadata fields is much slower than Ruby/ECMAScript.
-- Fixed an issue where NullPointerException could be thrown from ExportProcessingJob.getTotalItemCount() or ExportProcessingJob.getFailedItemCount() early in the export process.
+- Fixed an issue where NullPointerException could be thrown from `ExportProcessingJob.getTotalItemCount()` or `ExportProcessingJob.getFailedItemCount()` early in the export process.
 - Imager
 - Fixed an issue where Imager memory settings were not applied on Windows.
 
 ### Miscellaneous
-- Due to issues with new MIME-types, cases created with older versions will need migrating. Migration of Elastic cases requires starting with the switch -Dnuix.elasticsearch.migration.enabled=true.
+- Due to issues with new MIME-types, cases created with older versions will need migrating. Migration of Elastic cases requires starting with the switch `-Dnuix.elasticsearch.migration.enabled=true`.
 - Added error handling in PDF tab view.
-- Improved performance of the File -> Import -> Import Annotations action.
+- Improved performance of the *File -> Import -> Import Annotations* action.
 - Improved performance of migrating 7.7 cases with geolocation data.
 - Fixed an issue causing excessive logging when cleaning up temp folders.
 - Improved Elasticsearch disk resource usage for annotation operations such as tagging. This requires the updated Nuix Elasticsearch plugin to be installed.
 - Disabled changes to Metadata Profiles made from the Results View by default. Any column ordering or resizing done within the Results View will not be written back to the Metadata Profile.
-- Set -Dnuix.resultsView.saveToMetadataProfile=true to allow changes made in the Results View to be written back to the Metadata Profile.
+- Set `-Dnuix.resultsView.saveToMetadataProfile=true` to allow changes made in the Results View to be written back to the Metadata Profile.
 - Suppress exception dialogs when retrieving items in the Thumbnail view. The exception details can still be seen in the logs.
-- Licences with CASE_CREATION can now make use of "Custom Named Entities" in Workstation.
+- Licences with **CASE_CREATION** can now make use of "Custom Named Entities" in Workstation.
 - Added support for Metadata profile grouping.
 - Relaxed the worker temp directory maximum path length from 76 to 200 due to improvements within the Lotus Notes libraries.
 - Added retry logic when accessing Derby database files to account for unreliable network file systems.
@@ -202,7 +202,7 @@ This release includes resolutions for the following previously known issues:
 - Switch for Spanish language translation is changed due to an ABBYY issue. Users need to use the following switch:
 
 `-Duser.language=es -Duser.country=MX`
-> **Note**: The -Duser.language=es -Duser.country=419 is no longer supported and is replaced with the above switch. 
+> **Note**: The `-Duser.language=es -Duser.country=419` is no longer supported and is replaced with the above switch. 
 
 ## Known Issues
 The following known issues are found in this release.  

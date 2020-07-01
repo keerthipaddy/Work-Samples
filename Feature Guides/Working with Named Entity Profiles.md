@@ -1,4 +1,4 @@
-# Introduction
+# Named Entity Extraction - Introduction
 Workstation extracts intelligence from processed data in the form of named entities. Named Entities are objects resembling a specific data pattern. Workstation extracts and indexes these values for analysis. These values are recognized from matches based on pre-defined regular expression pattern searches utilized by Workstation. Named Entities identify specific data sets and are useful for analysis as they enable information such as companies, personal IDs, names, or phone numbers to be brought to the surface of the data set. Named Entity identification and extraction takes place during processing and is extracted from item content (text), properties, or both.
 
 Workstation has an enhanced entity model with additional flexibility and the ability to extract entity information from a set of available default regular expressions. The current default named entities available are Company, Credit Card, Personal ID, Email, Money, Person, Phone Number, Country, IP Address, URL.
@@ -131,3 +131,33 @@ Some available patterns:
 | /[\p{InCyrillic}\p{InCyrillic_Supplementary}]*/ | Matches all Unicode Cyrillic and Cyrillic Supplement alphabet families using the Unicode block names. |
 
 > Tip: There are a number of great resources for regular expressions on the internet that you can refer to for formulating character-based regex patterns for searching, for example http://regexlib.com/CheatSheet.aspx
+
+# Custom Named Entities
+The Named Entity Profiles option within the Global Options panel provides the ability to set the preferred entities to be used for consistent processing across cases. You can use industry-standard regular expressions in the data set and can enact profiles that have a set of these preferred entities for processing. It also shows improved performance by only selecting the named entities you wish to use.
+
+The Custom Named Entities feature is available to users with a Case_Creation license using Workstation. The Nuix Data Finder (NDF) plugin requires the SENSITIVE_DATA_FINDER plus feature to be enabled. 
+
+![Custom Named Entities](https://github.com/keerthipaddy/worksamples/blob/master/images/CNE_GLO.png)
+
+## Creating Custom Named Entities
+Navigate to Global Options and select Custom Named Entities to view the list editor. The Custom Named Entities option allows you to customize full regular expressions within Workstation. 
+
+To add a new entity definition, click +. Select a scope for the new entry and click OK. The Create Entity Definition window is displayed with Entity Details and Test Entity tabs. The Entity Details tab enables you to create a new entity. 
+
+![Entity Details](https://github.com/keerthipaddy/worksamples/blob/master/images/NEP.png)
+
+| Option |	Description |
+|------- | -----------|
+|Set Entity Name and Description|  |
+| Name | Enter a name for the Named Entity, ensuring it does not contain an asterisk (*).|*
+| Icon | Browse and select an icon. The icon size needs to meet the specifications 48px by 48px or smaller. A default icon for an entity is used, if an icon is not provided.|
+| Description |	Add a description for the Named Entity (optional). |
+| Write Entity Pattern |  |
+| Pattern	| Enter a valid regular expression pattern. Navigate to the Test Entity tab to validate the pattern and add it to the list. The default character length for the pattern is 256 characters. | 
+| Import | Allows you to import a pattern from a file. |
+
+The Test Entity tab enables you to test the entity pattern. In the Sample text field, enter the text you want to test. To import a sample text, click Import and browse to the location. Click Run test and the matches are shown in the Matches field. Clear clears the fields. Click OK to add the named entity to the list.  
+
+When creating a named entity, a user can assign a .png file to be the icon. Otherwise, the default icon will be used. By default, a new search found in the Named Entities folder will be assigned a generic icon. For example, a search for Twitter handles could have a Twitter icon by editing the regex.properties file in the Named Entities directory to point to twitter.png. The regex.properties file also controls how the icons should be sectioned and what order they would appear in the Results Pane selection drop-down.
+
+> Note: Ensure the Extract named entities from text, Include text stripped items, Extract named entities from properties options are enabled within the Evidence Processing Settings panel. Every time a named entity is added, reload the items on the results pane to view results.

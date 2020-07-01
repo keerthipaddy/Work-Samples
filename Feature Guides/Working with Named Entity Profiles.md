@@ -81,6 +81,38 @@ Searches are case sensitive and will locate the word anywhere in the file. For e
 
 ## Viewing Wordlists in Workstation
 The wordlists are processed and added in the Words view in the view pane.
+![](https://github.com/keerthipaddy/worksamples/blob/master/images/Wordlist.png)
 
+# Regular Expression Queries for Named Entities
+A regular expression is used to describe search patterns in named entities that match patterns of text strings, such as particular characters, numbers, or words. Named Entities are stored as regular expressions files in the Named Entities library in C:\Program Files\Nuix\Nuix Application version\user-data\Named Entities. Users can add Named Entities to the Named Entities library by adding the regular expressions file (regexp) and updating the regex.properties file. 
 
+1. Adding a Named Entity requires a regexp (or .list) file and an icon (.png). The regexp file is a plain text file that will hold your regular expression and an icon that is a .png file, ideally 48 x 48 pixels, or smaller.
+2. Copy the regexp or list file into the default directory located here: C:\Program Files\Nuix\Nuix Application version\user-data\Named Entities. Further information needs to be entered into the regexp file to display the new entity. Workstation should be closed and a backup of the file should be made prior to editing it.
+3. When editing your regexp file, ensure the first line starts with a # (to indicate a comment) followed by a description of the group the entity is part of, such as a location or named entities, which are the default groups in Workstation. The next line should give the name of the entity, and the last line should provide the name of the filename of the icon to which you want the directory to point. 
+For example: If you create a Social Media entity, it should look similar to the example below:
+```
+NamedEntities.social.group=Custom
+NamedEntities.social.title=Social Media
+The entity PNG file name must be identical to the way it is written in the regex files.
+```
+4. Update the regex.properties file with the group and title information.
+5. Launch Workstation and select all items, right-click, and select Reload Items from Source data. In the Data Processing Settings, ensure Extract named entities from text and Extract named entitles from properties are enabled.
+6. Post-processing, in the Results pane, change the Results view to Entities. Select the Entities dropdown to view the new entity that was added. Select the new entity to see the items identified from reprocessing and added to the entity.
 
+## Performing a Regular Expression Search
+To perform a regular expression search, add the forward-slash character (/) to the start and end of the regular expression to be used in the search. For those familiar with regular expressions, the pattern is matched against each word, so using expressions such as the caret (^) to find the start of a line in the text is not possible. Matching is not case sensitive and literal characters must be entered in lowercase.
+
+You can also form complex phrase queries by using spaces within the regular expressions, and “slop” for phrases within regular expressions is supported. A "slop" of a phrase query is to search for words within a certain distance of each other, using the tilde (~) symbol at the end of a phrase query along with a numerical value that indicates the number of unrelated words that can occur in between. 
+
+Some available patterns:
+| Syntax | Results | 
+| ------ | --------| 
+| \d | A digit (0-9)|
+| \D | A non-digit |
+| | | Matches either the left or right side |
+| [] | One of the characters within the brackets | 
+|. | Any character | 
+| .* | The same as a multiple character wildcard search |
+| \b | A word boundary. Hyphenated words are broken up by word boundaries. This matches hyphen boundaries and the end of a word. |
+| ^ | The start of a word. Will not match hyphen boundaries. |
+| $ | The end of a word. Will not match hyphen boundaries. |

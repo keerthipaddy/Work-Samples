@@ -161,3 +161,40 @@ The Test Entity tab enables you to test the entity pattern. In the Sample text f
 When creating a named entity, a user can assign a .png file to be the icon. Otherwise, the default icon will be used. By default, a new search found in the Named Entities folder will be assigned a generic icon. For example, a search for Twitter handles could have a Twitter icon by editing the regex.properties file in the Named Entities directory to point to twitter.png. The regex.properties file also controls how the icons should be sectioned and what order they would appear in the Results Pane selection drop-down.
 
 > Note: Ensure the Extract named entities from text, Include text stripped items, Extract named entities from properties options are enabled within the Evidence Processing Settings panel. Every time a named entity is added, reload the items on the results pane to view results.
+
+# Named Entity Profiles
+A Named Entity Profile provides the ability to set the preferred named entity/entities to be used for consistent processing across cases. It also shows improved performance by only selecting the named entities the users wish to use. 
+
+![Named Entity Profile](https://github.com/keerthipaddy/worksamples/blob/master/images/NEP_GLO.png)
+
+## Creating a Named Entity Profile
+Navigate to Global Options and select Named Entity Profiles to view the list editor.
+- To add and edit a named entity profile, select Named Entity Profiles from Global Options, click on the (+) sign to add a new named entity profile.
+- To rename a profile, select the rename option from the list editor. Note that the name of the profile cannot be changed from the Modify Named Entity Profile window.
+1. Select Named Entity Profiles from Global Options, click on the (+) sign to add a new named entity profile.
+2. Select the scope for the entry and click OK. 
+The Create Named Entity Profile window appears. 
+
+![Create Named Entity Profile](https://github.com/keerthipaddy/worksamples/blob/master/images/NEP1.png)
+
+3. In the Profile Details section, provide a name and a description for the Named Entity Profile.
+4. In the Entities section, select/ search or filter for your preferred entity you want to add from the All Entities list. The selected entities appear within the Entities in Profile list. 
+5. To remove an entity from the profile list, click remove (-). See notes on Remove/ Delete Entities and Profiles below for more information. 
+6. Click OK to proceed.  
+
+> Note: 
+- While selecting the scope for Named Entity Profiles: 
+- A User scope Named Entity Profile should have User scope and Local computer scope Custom Named Entities to select from.
+- A Case scope Named Entity Profile should have Case, User, Local computer scope Custom Named Entities to select from.
+- A Local scope Named Entity Profile should have only the Local computer scope Custom Named Entity to select from.
+- The Case scope option appears only when the case is open.
+- The Case scope Custom Named Entities must be present in the case for which the Custom Named Entities were created. 
+- The Case scope Named Entity Profiles can only be used as an evidence processing settings. Case scope Named Entity Profiles cannot be added in a data processing profile.
+- Named Entity Profiles can also be used directly as a data processing setting from the Advanced button while adding case evidence.
+- Renaming a Named Entity Profile removes it from the selection: Once a Named Entity Profile is renamed, the profile must be selected within the Data processing settings, Use custom named entity profile drop-down option.
+- Similarly, if the Named Entity profile is used in a Data Processing Profile, then the user will need to update the Data Processing Profile and select the renamed profile from the Add Case Evidence, Processing profile drop-down option.
+- To remove or delete a named entity profile, click on the remove option and accept the confirmation message to remove the selected profile.
+- If a profile selected for deletion is used for processing, then the processing will fail. Users are advised to verify before proceeding with the deletion of a named entity profile.
+- Custom Named Entities will only be processed if they are added in a Named Entity Profile that is being used.
+- If a Custom Named Entity is deleted within a profile, then all processing jobs using that profile will fail. In this case, the profile must be updated. 
+- When you update the profile in Edit mode from Global options, the Entities in Profile list is automatically updated and the deleted Custom Named Entity is removed. Click OK. This ensures the profile can be used.

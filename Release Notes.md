@@ -81,11 +81,11 @@ This release includes resolutions for the following previously known issues:
 - Fixed a potential null-pointer exception in the thumbnails view.
 - Fixed a potential index out-of-bounds exception in the results view.
 - Updated documentation for Slack MIME types to reflect JSON support.
-- Strengthened Global Options -> Configuring Connections -> Remote Collections -> Test connection. Values for the Host field must now be prefixed by http:// or https://.
+- Strengthened *Global Options -> Configuring Connections -> Remote Collections -> Test connection*. Values for the Host field must now be prefixed by http:// or https://.
 - Fixed an issue with entity counts in the Preview pane.
 - Added Delivered-To the field as inferred Bcc recipients when parsing emails.
 - Better error handling of invalid Cloud License Server credentials.
-- Addressed some OutOfMemoryErrors that could occur when exporting large amounts of data.
+- Addressed some *OutOfMemoryErrors* that could occur when exporting large amounts of data.
 - Fixed an issue in Filtered Items/Cluster Runs that was affecting the display of some augmented clusters.
 - Fixed an issue that was potentially causing inaccurate pivot resemblance values when adding items to existing clusters.
 - Fixed an issue with PDF generation of Microsoft PowerPoint documents that could cause indefinite render times.
@@ -108,10 +108,10 @@ This release includes resolutions for the following previously known issues:
 ### Extraction
 - Fixed an unexpected error while processing Slack data in Elasticsearch cases.
 - Used channel name for grouping messages.
-- Removed SOCIAL_MEDIA licence restriction for processing Facebook dumps, WhatsApp stores, and LineChat.
+- Removed **SOCIAL_MEDIA** licence restriction for processing Facebook dumps, WhatsApp stores, and LineChat.
 - Improved validation of bad data when parsing Windows Registry files.
 - Added support for detecting Debian installer package files (.deb).
-- Added UI to specify the charset of Zip files. Equivalent to setting nuix.data.zipFileCharsetOverride
+- Added UI to specify the charset of Zip files. Equivalent to setting *nuix.data.zipFileCharsetOverride*
 - Fixed stack overflow when reading invalid Windows Executable files.
 - Fixed an issue that was causing excessive logging when decrypting some email items.
 - Fixed an issue where password-protected OneNote sections were not marked as encrypted.
@@ -136,14 +136,14 @@ This release includes resolutions for the following previously known issues:
 - Fixed an issue where XRY calls marked as busy or no answer were not decoded correctly.
 - Added a switch -Dnuix.data.exchangews.skipLegacyIdShortening=true to skip legacy EWS ID shortening, which triggers slow large folder scan and resulted in EWS connection timeout.
 - Added support for extracting RAR5 archives.
-- The Amazon S3 "Last-Modified" property now maps to the standard Nuix property "File Modified".
+- The Amazon S3 **Last-Modified** property now maps to the standard Nuix property **File Modified**.
 - Blocked external resources in PowerPoint and Word documents from being downloaded during extraction and Imaging.
 - Fixed an issue where NTFS volume shadow copies extraction was recursing into System Volume Information.
 - Fixed an issue where the XRY image evidence item naming was not meaningful.
 - Fixed an issue where if an error occurred while processing large zip files, the item would incorrectly be named 'Error'.
 - Fixed an issue where File Safe (mfs01) files could not be processed when stored in an Amazon S3 bucket.
 - Fixed an issue where lengthy numerical values in CSV files were losing precision.
-- Fixed an issue where the "Decryption Password" field of metadata profile shows no value even if the password exists.
+- Fixed an issue where the **Decryption Password** field of metadata profile shows no value even if the password exists.
 
 ### Export
 - Fixed a rare issue that was causing incomplete PDF rendering of some Outlook items.
@@ -152,15 +152,15 @@ This release includes resolutions for the following previously known issues:
 - The number of failed items (if any) is now reported in the case subset export progress dialog.
 - Support continuous numbering without a delimiter to be used with production set numbering.
 - Ensure Elastic cases created as a case subset from a Lucene/Derby case will be functioning as expected when doing case subsets back to new Lucene/Derby cases.
-- Using the switch -Dnuix.storage.storedData.enableAdditionalEmbeddedItems=false can speed up large case subset and export operations.
-- Do not use this switch if the case has "dynamic child items" created using the "Create New Child Item" feature in the Binary tab within the item Preview pane.
+- Using the switch `-Dnuix.storage.storedData.enableAdditionalEmbeddedItems=false` can speed up large case subset and export operations.
+- Do not use this switch if the case has **dynamic child items** created using the **Create New Child Item** feature in the Binary tab within the item Preview pane.
 - Fixed an issue where text view and PDF view were producing different text.
 - Updated the failed item count in the OCR summary file to include failed item duplicates.
 - Production profiles now allow the use of standard or advanced numbering for any export load file type.
 - Legal export now pauses in response to low disk space events.
 
 ### Scripting
-- Added usingText to Item.Text. It can be used in place of the getReader method, which can throw UnsupportedOperationException.
+- Added *usingText* to *Item.Text*. It can be used in place of the *getReader* method, which can throw `UnsupportedOperationException`.
 - Fixed Processor#process() so that the profile optionally nominated in Processor#setProcessingProfile(String) is honored.
 - Fixed a few potential null-pointer exceptions in CredentialsStore.
 - Fixed an issue with Custodian#setName() that was causing illegal state exceptions.

@@ -120,15 +120,15 @@ Some available patterns:
 
 | Query Syntax | Description | 
 |---------------|-------------|
-| /apple|orange/ | Matches all items that contain either apple or orange. |
-| /eat|ate apple|orange/ ~2 | Matches all items that contain either eat or ate and then apple or orange, with up to two unrelated terms separating them. Note that only whole words are matched. To match partial words, use wildcard characters. |
-| /gr[eao]y/ | Matches all items that contain either grey, gray, or groy. |
-| /gr[^eao]y/ | Matches all items that contain at least one word starting with gr followed by a character that is not e, a or o, followed by y. This query would match griy and gr3y. |
-| /.oe.* not/ | An example of a phrase query. Matches all items that have a word starting with any letter followed by oe, optionally followed by any other characters then the word not. This query would match "does not", "joe not" and "ioexception not".
-| /0\d{1,3}/ | Matches all items that start with 0 followed by 1 to 3 digits. This query would match 02, 0404, 00 and 080. |
+| `/apple|orange/` | Matches all items that contain either apple or orange. |
+| `/eat|ate apple|orange/ ~2` | Matches all items that contain either eat or ate and then apple or orange, with up to two unrelated terms separating them. Note that only whole words are matched. To match partial words, use wildcard characters. |
+| `/gr[eao]y/` | Matches all items that contain either grey, gray, or groy. |
+| `/gr[^eao]y/` | Matches all items that contain at least one word starting with gr followed by a character that is not e, a or o, followed by y. This query would match griy and gr3y. |
+| `/.oe.* not/` | An example of a phrase query. Matches all items that have a word starting with any letter followed by oe, optionally followed by any other characters then the word not. This query would match "does not", "joe not" and "ioexception not".
+| `/0\d{1,3}/` | Matches all items that start with 0 followed by 1 to 3 digits. This query would match 02, 0404, 00 and 080. |
 | /0\d{1,3} \d{3,4} \d{3,4}/ OR /0\d{1,3} \d{6,8}/ | Matches all items that may contain local phone number patterns. The first part of this query would match 02 2328 1929, 043 232 192 and 0404 0233 2333. The second part would match 02 23281929, 043 23221923 and 0404 023323. There are different conventions for how phone numbers are grouped, so you will probably need to adjust this query for different cases. |
-| /[\u0400-\u052f]*/ | Matches all Unicode Cyrillic and Cyrillic Supplement alphabet families. Note that adding the asterisk (*) will highlight whole words for some languages such as Russian and Serbian. |
-| /[\p{InCyrillic}\p{InCyrillic_Supplementary}]*/ | Matches all Unicode Cyrillic and Cyrillic Supplement alphabet families using the Unicode block names. |
+| `/[\u0400-\u052f]*/` | Matches all Unicode Cyrillic and Cyrillic Supplement alphabet families. Note that adding the asterisk (*) will highlight whole words for some languages such as Russian and Serbian. |
+| `/[\p{InCyrillic}\p{InCyrillic_Supplementary}]*/` | Matches all Unicode Cyrillic and Cyrillic Supplement alphabet families using the Unicode block names. |
 
 > Tip: There are a number of great resources for regular expressions on the internet that you can refer to for formulating character-based regex patterns for searching, for example http://regexlib.com/CheatSheet.aspx
 

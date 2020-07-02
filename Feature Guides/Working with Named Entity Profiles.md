@@ -19,7 +19,7 @@ The Evidence Processing Settings must be enabled to identify named entities with
 ## Data Processing Settings
 Conduct processing only over the text content of an item and/or search within the metadata properties associated with an item from the highlighted options shown below. 
 
-![Data Processing Settings](https://github.com/keerthipaddy/worksamples/blob/master/images/NE_Evidence%20Processing%20Settings_resize.png)
+![Data Processing Settings](https://github.com/keerthipaddy/worksamples/blob/master/images/NE_Evidence%20Processing%20Settings.png)
 
 Options              | Description    |
 ------------------------------ | ---------------------------------------------------------------------|
